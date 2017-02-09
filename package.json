@@ -1,0 +1,11 @@
+{
+  "name": "qlik-sense-visualization-extension-testing",
+  "version": "1.0.0",
+  "description": "Scaffolding project for testing Qlik Sense object extensions",
+  "author": "QlikTech International AB",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@github.com:qlik-oss/qlik-sense-visualization-extension-testing.git"
+  }
+}
