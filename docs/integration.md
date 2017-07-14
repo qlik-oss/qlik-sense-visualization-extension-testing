@@ -17,11 +17,13 @@ The communication between the node context and the web browser context is establ
  ```
 "extend": "^3.0.0"
 "playground-js-api": "git+ssh@github.com:Qlik-Branch/playground-js-api.git"
-"after-work.js": "^1.0.0"
+"after-work.js": "^2.2.0"
+"protractor": "^5.1.2"
 ```
 * "extend": to be able to merge test configuration
 * "playground-js-api": " enables you to connect to Qlik Playground with an `apiKey`
 * "after-work.js": contains test environment
+* "protractor": JS wrapper for automation web browser interactions
 
  2. Run the command: **npm install**
 
@@ -29,10 +31,9 @@ The communication between the node context and the web browser context is establ
 The test framework uses a chromeDriver to interact with the browser and this is not included the the npm packages.
 ```
 "scripts": {
-    "test:setup-webdriver": "node_modules/after-work.js/node_modules/.bin/webdriver-manager update --standalone false"
+    "test:setup-webdriver": "node_modules/.bin/webdriver-manager update --standalone false"
 ```
 The script target above installs the chromeDriver and needs to be to be run only once.
-The path above is for a node 4.x environment. For npm > 5.x the path is *"node_modules/.bin/webdriver-manager update --standalone false"*.
 
 ### Setting apiKey
 The Qlik Playground `apiKey` must be set to an environment variable to avoid checking in, thus making the `apiKey` public.
